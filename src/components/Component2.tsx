@@ -1,3 +1,3 @@
 export function Component2() {
-    return <div>Math.random()</div>;
+    return <div>{Math.random()}</div>;
 }
