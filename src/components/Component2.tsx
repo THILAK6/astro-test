@@ -1,3 +1,4 @@
 export function Component2() {
-    return <div>{Math.random()}</div>;
+    var randomNumber = Math.random();
+    return <div>{randomNumber}</div>;
 }
