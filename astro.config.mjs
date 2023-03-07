@@ -10,26 +10,5 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   integrations: [react()],
   output: 'server',
-  build: {
-    staticHeaders: {
-      '**/*.js': [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=300',
-        },
-      ],
-      '**/*.css': [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=300',
-        },
-      ],
-      '**/*.png': [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=300',
-        },
-      ],
-    },
-  },
+  adapter: cloudflare({ mode: "directory" })
 });
