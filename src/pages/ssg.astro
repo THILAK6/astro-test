@@ -4,7 +4,7 @@
 	import { Component2 } from "../components/Component2";
 
 	Astro.response.headers.set(
-		"Cache-Control", "max-age=0, s-maxage=300,stale-while-revalidate=300"
+		"Cache-Control", "max-age=0, s-maxage=300"
 	)
 
     export const prerender = true;
